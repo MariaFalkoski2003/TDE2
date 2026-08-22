@@ -10,9 +10,37 @@
             
             <Image Source="mathlogo.png" Aspect="Center" 
                    HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Picker x:Name="pkDificuldade"
+                    Title="Escolha a dificuldade"
+                    SelectedIndexChanged="pkDificuldade_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>Fácil</x:String>
+                    <x:String>Médio</x:String>
+                    <x:String>Difícil</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label x:Name="lbQuestao"
+                   Text="Questão 1 de 10"
+                   HorizontalOptions="Center"/>
 
+            <Label x:Name="lbTempo"
+                   Text="Tempo: 30"
+                   HorizontalOptions="Center"
+
+                   FontSize="22"/>
+
+            <ProgressBar x:Name="pbProgresso"
+                         Progress="0"/>
+            
+            <Label x:Name="lbPontos"
+                   Text="Pontos: 0"
+                   HorizontalOptions="Center"
+                   FontSize="22"/>
+            
             <Label Text="Resolva o desafio matemático abaixo:" FontSize="18"
                    HorizontalOptions="Center" VerticalOptions="Start"/>
+
+            
 
             <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
                 <Label x:Name="lb1" FontSize="30" Text="5"/>
